@@ -60,6 +60,10 @@ Scan function is loaded at table-binding time. It goes through the storage abstr
 
 - ( `BufferManager` )
 
+> Notes:
+>
+> - There are multiple implementations of buffer manager, but `StandardBufferManager` is traced in this code map.
+
 ## Compression Algorithm
 
 Compression algorithm is decided upon write time and stored together with data. Upon data read, it's deserialized and loaded into `ColumnSegment`.
@@ -73,3 +77,7 @@ Details:
 - Compression type detection at read time:
 
     - `RowGroup::GetColumn` calls `ColumnData::Deserialize` which loads `DataPointer` struct from data. `compression_type` in the struct is the compression type decided at write time.
+
+> Notes:
+> 
+> - There are multiple types of compression algorithms, but `UncompressedString` and `DictionaryCompression` are traced in this code map.
