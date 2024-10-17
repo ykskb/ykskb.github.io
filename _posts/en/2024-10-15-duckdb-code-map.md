@@ -17,6 +17,8 @@ Please view in your favorite image viewer. It's a light (< 300KB) SVG image, but
 
 > Notes:
 >
+> - If there's no arrow coming out of a function, it's often calling the function in the same file. You most likely can proceed to read downwards in the same file.
+>
 > - Code excerpts are partial most of the time. Sometimes it has `...` to indicate there are skipped lines, but it's not there most of the time.
 > 
 > - Sometimes function signatures miss return types and/or function arguments. Apologies in advance.
